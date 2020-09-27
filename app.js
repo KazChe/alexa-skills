@@ -1,6 +1,10 @@
 'use strict';
 
-const twilio = require('twilio');
+const accountSid = process.env.SID
+const authToken = process.env.AUTH
+const tphone = process.env.TPHONE
+const mPhone = process.env.MPHONE
+const twilio = require('twilio')(accountSid, authToken)
 
 module.exports.alexatext = async (event, context) => {
 
@@ -18,10 +22,13 @@ module.exports.alexatext = async (event, context) => {
             let options = {}
 
             if(req.intent.name === "HelloIntent") {
-                let phone = req.intent.slots.phoneNumber.value
+                var phone = req.intent.slots.phoneNumber.value
                 options.speechText = "Sending text message to "+phone+"."
                 options.endSession = true
-                context.succeed(buildResponse(options))
+                await twilio.messages
+                    .create({body: 'Hi there!', from: tphone, to: mPhone})
+                    .then(message => console.log(message.sid))
+                return buildResponse(options)
             } else {
                 throw "Unknown Intent"
             }
