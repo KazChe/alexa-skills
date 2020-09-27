@@ -45,5 +45,5 @@ functions:
     events:
       - http:
           path: alexatext
-          method: get
+          method: post
           private: false
