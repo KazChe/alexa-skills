@@ -34,6 +34,7 @@ package:
    - .git/**
    - test/**
    - .idea/**
+   - event.json
 
 functions:
   s3presign:
