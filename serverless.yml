@@ -1,0 +1,48 @@
+
+service: alexatext
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+# you can overwrite defaults here
+  stage: dev
+  region: us-east-1
+
+#custom:
+
+
+# you can add statements to the Lambda function's IAM Role here
+#iamRoleStatements:
+#    - Effect: "Allow"
+#      Action:
+#        - "s3:GetObject"
+#      Resource: ""
+#    - Effect: "Allow"
+#      Action:
+#        - "s3:ListObject"
+#      Resource: "*"
+    
+package:
+ include:
+   - include-me.js
+   - include-me-dir/**
+ exclude:
+   - exclude-me.js
+   - exclude-me-dir/**
+   - .gitignore
+   - .git/**
+   - test/**
+   - .idea/**
+
+functions:
+  s3presign:
+    handler: app.alexatext
+    environment:
+
+
+    events:
+      - http:
+          path: alexatext
+          method: get
+          private: false
