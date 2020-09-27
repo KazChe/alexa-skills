@@ -19,7 +19,7 @@ module.exports.alexatext = async (event, context) => {
 
             if(req.intent.name === "HelloIntent") {
                 let phone = req.intent.slots.phoneNumber.value
-                options.speechText = "Hey there "+phone+"."
+                options.speechText = "Sending text message to "+phone+"."
                 options.endSession = true
                 context.succeed(buildResponse(options))
             } else {
