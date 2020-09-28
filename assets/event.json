@@ -87,11 +87,11 @@
     "locale": "en-US",
     "timestamp": "2020-09-28T01:37:54Z",
     "intent": {
-      "name": "HelloIntent",
+      "name": "SendIntent",
       "confirmationStatus": "NONE",
       "slots": {
-        "phoneNumber": {
-          "name": "phoneNumber",
+        "textMessage": {
+          "name": "textMessage",
           "value": "remind me to buy milk",
           "confirmationStatus": "NONE",
           "source": "USER",
