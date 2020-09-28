@@ -1,27 +1,106 @@
 {
+  "version": "1.0",
   "session": {
-    "new": false,
-    "sessionId": "session1234",
-    "attributes": {},
-    "user": {
-      "userId": "usr123"
-    },
+    "new": true,
+    "sessionId": "amzn1.echo-api.session",
     "application": {
-      "applicationId": "amzn1.echo-sdk-ams.app.5acba9b5-6d09-4444-aaa8-618c56eb0335"
+      "applicationId": "amzn1.ask.skill.3a12bac9-d2f9-43fe-df238d689830"
+    },
+    "user": {
+      "userId": "amzn1.ask.account."
     }
   },
-  "version": "1.0",
+  "context": {
+    "Viewports": [
+      {
+        "type": "APL",
+        "id": "main",
+        "shape": "RECTANGLE",
+        "dpi": 213,
+        "presentationType": "STANDARD",
+        "canRotate": false,
+        "configuration": {
+          "current": {
+            "video": {
+              "codecs": [
+                "H_264_42",
+                "H_264_41"
+              ]
+            },
+            "size": {
+              "type": "DISCRETE",
+              "pixelWidth": 960,
+              "pixelHeight": 600
+            }
+          }
+        }
+      }
+    ],
+    "Viewport": {
+      "experiences": [
+        {
+          "arcMinuteWidth": 246,
+          "arcMinuteHeight": 144,
+          "canRotate": false,
+          "canResize": false
+        }
+      ],
+      "shape": "RECTANGLE",
+      "pixelWidth": 960,
+      "pixelHeight": 600,
+      "dpi": 213,
+      "currentPixelWidth": 960,
+      "currentPixelHeight": 600,
+      "touch": [
+        "SINGLE"
+      ],
+      "video": {
+        "codecs": [
+          "H_264_42",
+          "H_264_41"
+        ]
+      }
+    },
+    "Extensions": {
+      "available": {
+        "aplext:backstack:10": {}
+      }
+    },
+    "System": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.3a12bac9-d2f9-43fe-a7ce"
+      },
+      "user": {
+        "userId": "amzn1.ask.account"
+      },
+      "device": {
+        "deviceId": "amzn1.ask.device",
+        "supportedInterfaces": {}
+      },
+      "apiEndpoint": "https://api.amazonalexa.com",
+      "apiAccessToken": "eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjNhMTJiYWM5LWQyZjktNDNmZS1hN2NlLWRmMjM4ZDY4OTgzMCIsImV4cCI6MTYwMTI1NzM3NCwiaWF0IjoxNjAxMjU3MDc0LCJuYmYiOjE2MDEyNTcwNzQsInByaXZhdGVDbGFpbXMiOnsiY29udGV4dCI6IkFBQUFBQUFBQUFEM1lCdFdoVVhxNFgya25ZaVRyTHhhS1FFQUFBQUFBQUJLcktiMVlPV2paVzltRWo4RHNnY0hkK2NyTEhJMit1T0hlMWZpSzlsOEZzcVNORmdTSzhWUEt0Rys5c0dGb0NRZDlmbEV1SWJZejBteXFrNDdkUFZESzNrSGViOUlSY2hqTERhUDkzOEc5cUZlOXZLNXMvbjB1S2ZVVlZCdWd5WHREQkhUL25scTZwUE1sV01GT0pEK3VkbHlLVkVtMDRJOEhBaW9TZU5TTjNnTkh0VkZSZEJZd2dkeFBnbGY5eWs0WFp6aTFKTmpuSXIxVTZWSjQySS9zZTBPaitUd0UwZUZLTyt2K1FWSitLbVR2VGI5U0VEMC9wMzRnZUh1TDJ1eHIxVktyZmdDOGNveVhqMTdlMUpySU5LUC9CY3pNa2xzcklBUklVZnk0MG9mMFFvei9vanZOSE1rNHJyMnNPS0ZDSXpyYTRUTCtBZ2wxOUdEa28ybUZYZWl2clprNkc1UENjVHZjRncwa0VGSGx2a0dFNEVFSE5wWGFCRGcwVmk4OVMydEh6MklTRjQ9IiwiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUg1N0hKWFdWN1hSUUk3UzJJMlpOSTdZR1VOM1pXUjYzS0FXNTM1T01aRkNVT01JSVVPWldYVVVSTFFHTVk3SVBVNUdIUzVLV1VQVTY0WkVWWVVJTU02WUtYSEFYSTJXTFJSNUoyQUZMMlRRTEUzMkZEVUJUSjVVV0w2SlE2U0cyU0lOVUVYVk5ZNUVHTEFORk9VU0k0RElBNU5FWkVXVVZUUVlMWElQUjZSSkRZUDJMQVFHNCIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRlVUWjMzV0FQQ0lCNVo3RUxKMzVZMk5VREJaWEY1NllQTElRU0laR1FMV1JWRFg2WkFFV1dMWUg1NFpWVEpUQzZWUFFaVlo1VExTMlJUQUNJU0xLQ0NYRVlSWE9BQVNSS1BDUUtUUlhESEM1NENTTlRaVzVRTEZHMlBHUFFWWjdaSVc3VVpRN05DUlZJUFJHRkw1MjI2UUZTNVlRTFc1U09SWFlIRU9PN05PSzNVRzRIS1JKRFo3R0xUTTU3S1lSWVNVV0VSSFRCR0RTSSJ9fQ.J30BOPwq7UGf7jL_oUBWarrVWUi1sQUnnMSKIVDJaqCq2xVn-7btwBdRRDGh7cSJnOLOYfmAgnGMGjNJUJchxH7BozBXFFpOh6cGuYQmwcElUGaXj7A9Sq4tCe8sIA44ZTHP42sOqXRKSpPjjOX0yqYYDXFzopE3vJSaU28lsxN932nW-ZOBnt-SbPaGVu-cZAuwmx2spx9QPe1P74XKS9IDgLb_Cn7ZgRgcNa_c8Ps7IIpkLFGXFTpbq9xVkbnhuvVjFSv3TIox6Mq3btdBtdJWDydGK4QP9-WD0tujaDMLlj7JIjYl4USKjcYFi_POwQ9z7anYxCVjEA9yfQCWAA"
+    }
+  },
   "request": {
+    "type": "IntentRequest",
+    "requestId": "amzn1.echo-api.request.b6fd9e23-3aff-bce0a0d1b96d",
+    "locale": "en-US",
+    "timestamp": "2020-09-28T01:37:54Z",
     "intent": {
+      "name": "HelloIntent",
+      "confirmationStatus": "NONE",
       "slots": {
         "phoneNumber": {
           "name": "phoneNumber",
-          "value": "4085555555"
+          "value": "remind me to buy milk",
+          "confirmationStatus": "NONE",
+          "source": "USER",
+          "slotValue": {
+            "type": "Simple",
+            "value": "remind me to buy milk"
+          }
         }
-      },
-      "name": "HelloIntent"
-    },
-    "type": "IntentRequest",
-    "requestId": "request5678"
+      }
+    }
   }
 }
