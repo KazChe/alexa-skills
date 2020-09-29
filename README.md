@@ -1,4 +1,4 @@
-# alexa-skills
+# alexa-send-text-message
 
 - Use alexa skills for sending text-message
 - Model is setup on developer.amazon.com's Alexa console
