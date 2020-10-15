@@ -11,4 +11,4 @@ type `AMAZON.SearchQuery` as it worked best in this case.
 
 ![Intetnt](https://raw.githubusercontent.com/KazChe/alexa-skills/master/assets/intent.png)
 
-- In Alexa developer console test the skill by saying `Alexa ask mytext app to send me <speak_your_message_t_be_sent>`
+- In Alexa developer console test the skill by saying `Alexa ask mytext app to send me <speak_your_message_to_be_sent>`
